@@ -1,68 +1,65 @@
-import React from "react";
-import Link from "next/link";
-import { Plane } from "lucide-react";
+import { Building2, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-white text-slate-600 py-16 border-t border-slate-200">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="bg-primary text-white p-2 rounded-xl shadow-sm">
-                <Plane size={24} className="stroke-[2.5]" />
+    <footer className="border-t border-gray-200 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-3">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-sm">
+                <Building2 className="w-4 h-4 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-slate-900">
-                Booking<span className="text-primary">Portal</span>
+              <span className="text-lg font-bold">
+                <span className="text-gradient">Stay</span>
+                <span className="text-gray-800">Ease</span>
               </span>
-            </Link>
-            <p className="text-sm leading-relaxed text-slate-500 mt-4 max-w-xs">
-              Your ultimate destination for seamless travel bookings. Experience premium stays, flights, and more.
-            </p>
-            <div className="flex gap-4 pt-4">
-              <Link href="#" className="hover:text-primary transition-colors text-sm font-semibold">Twitter</Link>
-              <Link href="#" className="hover:text-primary transition-colors text-sm font-semibold">Facebook</Link>
-              <Link href="#" className="hover:text-primary transition-colors text-sm font-semibold">Instagram</Link>
-              <Link href="#" className="hover:text-primary transition-colors text-sm font-semibold">LinkedIn</Link>
             </div>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              Premium hotel booking platform for unforgettable stays across India.
+            </p>
           </div>
-          
+
           <div>
-            <h3 className="text-slate-900 font-semibold mb-6">Company</h3>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Careers</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Blog</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Contact</Link></li>
+            <h4 className="text-sm font-semibold text-gray-900 mb-3">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><a href="/" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Home</a></li>
+              <li><a href="/search" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Search Hotels</a></li>
+              <li><a href="/dashboard" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">My Bookings</a></li>
+              <li><a href="/admin" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Admin</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-slate-900 font-semibold mb-6">Discover</h3>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Top Destinations</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Flights</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Hotels</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Exclusive Deals</Link></li>
+            <h4 className="text-sm font-semibold text-gray-900 mb-3">Support</h4>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Help Center</a></li>
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Cancellation Policy</a></li>
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Terms of Service</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-slate-900 font-semibold mb-6">Partners</h3>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Partner Portal</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Become a Partner</Link></li>
-              <li><Link href="#" className="hover:text-slate-900 transition-colors">Affiliate Program</Link></li>
+            <h4 className="text-sm font-semibold text-gray-900 mb-3">Contact</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2 text-sm text-gray-500">
+                <Mail className="w-4 h-4 text-indigo-500 shrink-0" /> support@stayease.in
+              </li>
+              <li className="flex items-center gap-2 text-sm text-gray-500">
+                <Phone className="w-4 h-4 text-indigo-500 shrink-0" /> +91 1800-123-4567
+              </li>
+              <li className="flex items-center gap-2 text-sm text-gray-500">
+                <MapPin className="w-4 h-4 text-indigo-500 shrink-0" /> Mumbai, India
+              </li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Booking Portal. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-slate-900 transition-colors">Terms of Service</Link>
-          </div>
+
+        <div className="mt-10 pt-6 border-t border-gray-100 text-center">
+          <p className="text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} StayEase. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

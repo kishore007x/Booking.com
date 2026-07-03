@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/navbar";
+import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Booking Portal | Premium Stays",
-  description: "Your ultimate destination for seamless travel bookings. Experience premium stays, flights, and more.",
+  title: "StayEase - Premium Hotel Booking",
+  description: "Book premium hotels across India with the best prices",
 };
 
 export default function RootLayout({
@@ -18,11 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col bg-background text-foreground antialiased`}>
-        <Navbar />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
+      <body className={`${inter.className} antialiased`}>
+        <Header />
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
